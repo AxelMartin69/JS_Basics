@@ -1,30 +1,45 @@
-/*
-Muutujad
-Vaatame kuidas luua ja kasutada muutujaid
-*/
-// Muutuja mille sisu saab muuta
-let name = "Axel";
+// Andmetüübid
 
-name = "Axel-Martin Tammekand";
+//Primitives
 
+// tekst
 
-// Muutuja mille nime muuta ei saa
+const name = "kadi tamm";
 
-const surname = "Tammekand"
+// number
 
-// masiivid
+const age = 25;
 
-const numbers = [1, 2, 3, 4]
-numbers.push(6)
+//pikkus
 
-// objektid
+const height = 1.70;
+
+// kas lapsed on???
+
+const hasKids = false;
+
+// null
+
+const hasAirplane = null;
+
+//undefined
+
+let test;
+
+//reference types 
+const hobis = ["music", "sport"]
+
+// objekt
 
 const person = {
-	name: "Kadi",
-	age: "20"
+	name: "kadi",
+	age: 25
 };
 
-person.age = "21"
+//kuupaev
 
-console.log(numbers);
-console.log(person);
+const today = new Date();
+
+
+console.log(today)
+console.log(typeof person)
