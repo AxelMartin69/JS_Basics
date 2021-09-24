@@ -1,27 +1,27 @@
-const num1 = 100
-const num2 = 50
-
-
+const name = "Kadi";
+const surname = "Tamm";
+const age = 25;
+const text = "Tere, olen Kadi";
+const tags = "arendus, veeb";
 
 let val;
 
-val = num1 + num2;
-val = num1 - num2;
-val = num1 * num2;
-val = num1 / num2;
-val = num1 % num2;
+val = name + " " + surname;
 
-// Math
+val = name;
+val += surname
 
-val = Math.PI;
-val = Math.round(2.5);
-val = Math.ceil(2.4);    //ümardab üles
-val = Math.floor(2.8);   //ümardab alla
-val = Math.sqrt(64);
-val = Math.abs(-5);
-val = Math.pow(4, 2);
-val = Math.random();
-val = Math.random() * 10;
+val = text + ", minu töövaldkond on " + tags;
+
+val = "See on \"Jutumärkides\"";
+
+val = name.toLowerCase();
+
+val = surname.charAt(surname.lenght - 1);
+val = surname.indexOf("a");
+val = surname.slice(0, 2);
+
+val = tags.split(",")
 
 
-console.log(val)
+console.log(val);
