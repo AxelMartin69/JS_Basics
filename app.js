@@ -1,45 +1,30 @@
-// Andmetüübid
+//tüübiteisendused
 
-//Primitives
+let val;
 
-// tekst
+//number -> string
+val = String(555);
 
-const name = "kadi tamm";
+// boolan -> string
 
-// number
+val = String(true);
 
-const age = 25;
+// objekt -> string
 
-//pikkus
-
-const height = 1.70;
-
-// kas lapsed on???
-
-const hasKids = false;
-
-// null
-
-const hasAirplane = null;
-
-//undefined
-
-let test;
-
-//reference types 
-const hobis = ["music", "sport"]
-
-// objekt
-
-const person = {
-	name: "kadi",
-	age: 25
-};
-
-//kuupaev
-
-const today = new Date();
+val = String(new Date());
 
 
-console.log(today)
-console.log(typeof person)
+// string -> number
+
+val = Number("5");
+
+//boolan -> number
+
+val = Number(true);
+
+// Tekst -> number: pole voimalik
+val = Number("tere")
+
+
+console.log(typeof val);
+console.log(val);
