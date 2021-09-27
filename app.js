@@ -1,23 +1,31 @@
-const name = "Kadi";
-const surname = "Tamm";
-const age = 25;
-const tags = "arendus, veeb";
-
+const numbers = [0, 1, 2, 3, 4, 5];
+const fruits = ["õun", "banaan", "virsik"];
 let val;
 
-//template
+val = numbers.length;
+val = Array.isArray(numbers); // kas on massinv??
+val = numbers[3];
+numbers[3] = 100; // asendamine
 
-val = `
-	<ul>
-		<li>Eesnimi on ${name}</li>
-		<li>Perekonnanimi on ${surname}</li>
-		<li>Vanus on ${age}</li>
-		<li>Tagid on ${tags}</li>
-	</ul>	
+// lisamine
+numbers.push(250); // taha
+numbers.unshift(45); // ette
 
-`;
+// eemaldamine
+numbers.pop(); // tagant
+numbers.shift(); // eest
 
+val = numbers.indexOf(100);
 
-document.body.innerHTML = val;
+// lõikamine
+numbers.splice(2, 1);
+
+val = fruits.sort();
+
+// numbrid kahanemis järjekorras
+val = numbers.sort(function(x, y){
+	return x-y;
+});
+
 
 console.log(val);
