@@ -1,40 +1,19 @@
-let color = "red";
+// for tsükkel
+//for(let i = 0; i < 10; i++){
+	//if(i % 2 === 0){
+	//	console.log(i)
+	//}
+//}
 
-switch(color){
-	case "red":
-		console.log("Stop");
-		break;
-	case "yellow":
-		console.log("Attention");
-		break;
-	case "green":
-		console.log("Go")
-		break;
-}
+//for(let i = 0; i < 10, i++){
+	//if(i === 5) break;
+	//if(i === 5) continue;
+	//console.log(i);
+//}
 
 
-let date = new Date;
-
-switch(date.getDay()){
-	case 1:
-		console.log("Esmaspäev");
-		break;
-	case 2:
-		console.log("Teisipäev");
-		break;
-	case 3:
-		console.log("Kolmapäev");
-		break;
-	case 4:
-		console.log("Neljapäev");
-		break;
-	case 5:
-		console.log("Reede");
-		break;
-	case 6:
-		console.log("Laupäev");
-		break;
-	case 7:
-		console.log("Pühapäev");
-		break;
-}
+let j = 0
+do{
+	console.log(j)
+	j++;
+} while(j < 10);
