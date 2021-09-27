@@ -9,15 +9,15 @@ let val;
 
 val = `
 	<ul>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
+		<li>Eesnimi on ${name}</li>
+		<li>Perekonnanimi on ${surname}</li>
+		<li>Vanus on ${age}</li>
+		<li>Tagid on ${tags}</li>
 	</ul>	
 
-`
+`;
 
 
-
+document.body.innerHTML = val;
 
 console.log(val);
