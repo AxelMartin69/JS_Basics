@@ -1,23 +1,27 @@
-const today = new Date();
+/*
+if(tingimuse){
 
-val = today.getMonth(); // jaanuar on 0
-val = today.getDate();
-val = today.getDay();
-val = today.getFullYear();
-val = today.getHours();
-val = today.getMinutes();
-val = today.getSeconds();
-val = today.getMilliseconds();
-val = today.getTime();
+} else {
 
-birthday = new Date("10/02/2021")
+}
 
-birthday.setMonth(2);
-birthday.setDate(12);
-birthday.setFullYear(2020);
-birthday.setHours(4);
-birthday.setMinutes(45);
+*/
+
+const id = 100;
+
+if(id == 100){
+	console.log("OK")
+} else {
+	console.log("NOT OK")
+}
+
+let testId;
+if(typeof testId !== "undefined"){
+	consolelog("Id is OK")
+} else {
+	console.log("Id is NOT OK")
+}
 
 
-console.log(birthday);
-console.log(val);
+// ? ternar operator
+console.log(id === 100 ? "OK" : "Not OK")
