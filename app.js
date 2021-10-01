@@ -1,9 +1,8 @@
 let val;
 
-val = document;
-val = document.all;
-val = document.all[4];
+val = document.getElementById("task-title");
 
-
+document.getElementById("task-title").style.background = ""
+document.getElementById("task-title").textContent = "My Tasks"
 
 console.log(val)
