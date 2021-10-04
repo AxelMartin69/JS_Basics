@@ -1,13 +1,11 @@
-let val;
+const form = document.querySelector("form");
 
-const li = document.createElement('li');
-li.className = 'collection-item';
-li.appendChild(document.createTextNode('Study JS'));
+const taskInput = document.querySelector("¤task");
 
-const a = document.createElement('a');
-a.className = 'secondary-element';
-a.appendChild(document.createTextNode('idk'));
-li.appendChild(a);
+taskInput.addEventListener("cut", runEvent);
 
-const ul = document.querySelector('ul');
-ul.appendChild(li);
+function runEvent(e) {
+	console.log(`Event is ${r.type}`)
+	console.log(e.target.value)
+
+}
