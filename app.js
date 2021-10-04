@@ -1,11 +1,14 @@
-const form = document.querySelector("form");
+// event elements
+const list = document.querySelector('ul');
 
-const taskInput = document.querySelector("¤task");
+console.log(list);
 
-taskInput.addEventListener("cut", runEvent);
+// click by symbol
+list.addEventListener('click', runEvent);
+
 
 function runEvent(e) {
-	console.log(`Event is ${r.type}`)
-	console.log(e.target.value)
-
+	console.log(`Event is ${e.type}`);
+	// something to do
+	
 }
