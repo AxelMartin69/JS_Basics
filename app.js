@@ -1,5 +1,6 @@
 const form = document.querySelector('form');
 const taskInput = document.querySelector('#task');
+const list = document.querySelector("ul")
 
 // submit
 form.addEventListener('submit', addTask);
@@ -22,4 +23,16 @@ function addTask(e) {
 	taskInput.value = '';
 
 	e.preventDefault();
+}
+
+list.addEventListener("click", removeTask)
+
+function removeTask(e) {
+	if(e.target.textContebt == "X") {
+		if(confirm("U Sure??")) {
+			list.removeChild(e.target.parentNode)
+		}
+	}
+	
+	
 }
