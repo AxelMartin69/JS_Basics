@@ -1,18 +1,24 @@
+/* --- events --- */
 const form = document.querySelector('form');
 const taskInput = document.querySelector('#task');
-const list = document.querySelector("ul")
+const list = document.querySelector('ul');
+const clearBtn = document.querySelector('#clear');
 
-// submit
+// events
 form.addEventListener('submit', addTask);
+list.addEventListener('click', delTask);
+clearBtn.addEventListener('click', delAll);
 
+
+// adding task
 function addTask(e) {
 	const li = document.createElement('li');
-	const list = document.querySelector('ul');
+	const link = document.createElement('a');
 	
 	li.className = 'collection-item';
 	li.appendChild(document.createTextNode(taskInput.value));
 
-	const link = document.createElement('a');
+	
 	link.className = 'secondary-content';
 	link.appendChild(document.createTextNode('X'));
 	link.setAttribute('href', '#');
@@ -20,19 +26,39 @@ function addTask(e) {
 	li.appendChild(link);
 	list.appendChild(li);
 
+	addTaskToLS(taskInput.value);
+
 	taskInput.value = '';
-
 	e.preventDefault();
-}
+};
 
-list.addEventListener("click", removeTask)
-
-function removeTask(e) {
-	if(e.target.textContebt == "X") {
-		if(confirm("U Sure??")) {
-			list.removeChild(e.target.parentNode)
+// deleting task
+function delTask(e) {
+	if (e.target.textContent == 'X') {
+		if (confirm('Do you want to delete this task?')) {
+			e.target.parentElement.remove();
 		}
+	};
+};
+
+// deleting all
+function delAll() {
+	if (confirm('Do you want to delete all tasks?')) {
+		while (list.firstChild) {
+			list.removeChild(list.firstChild);
+		};
+	}	
+};
+
+// add task to local storage
+function addTaskToLS(task) {
+	let tasks;
+	if (localStorage.getItem('tasks') === null) {
+		tasks = [];
+	} else {
+		tasks = JSON.parse(localStorage.getItem('tasks'));
 	}
-	
-	
-}
+	tasks.push(task);
+	console.log(tasks);
+	localStorage.setItem('tasks', JSON.stringify(tasks));
+};
